@@ -18,6 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/product',Proroutes)
 app.use('/auth',authRoutes)
 app.use('/checkout',stripeRoutes)
+app.get('/',function(req,res){
+    res.status(200).send("Server Working")
+})
 
 
 
